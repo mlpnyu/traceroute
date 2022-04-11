@@ -135,7 +135,7 @@ def get_route(hostname):
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
-                    hopHostName = '*'
+                    hopHostName = 'hostname not returnable'
                     #Fill in end
                 if types == 11:
                     bytes = struct.calcsize("d")
