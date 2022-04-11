@@ -142,7 +142,7 @@ def get_route(hostname):
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
                     #You should add your responses to your lists here
-                    tracelist1 = [ttl, howLongInSelect, addr[0], hopHostName]
+                    tracelist1 = [str(ttl), str(howLongInSelect), addr[0], hopHostName]
                     print (tracelist1)
                     tracelist2.append(tracelist1[:])
                     #Fill in end
@@ -153,7 +153,7 @@ def get_route(hostname):
                     #print("I'm in here")
                     #print(recvPacket)
                     #You should add your responses to your lists here
-                    tracelist1 = [ttl, howLongInSelect, addr[0], hopHostName]
+                    tracelist1 = [str(ttl), str(howLongInSelect), addr[0], hopHostName]
                     tracelist2.append(tracelist1[:])
 
                     #Fill in end
@@ -162,13 +162,13 @@ def get_route(hostname):
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
                     #You should add your responses to your lists here and return your list if your destination IP is met
-                    tracelist1 = [ttl, howLongInSelect, addr[0], hopHostName]
+                    tracelist1 = [str(ttl), str(howLongInSelect), addr[0], hopHostName]
                     tracelist2.append(tracelist1[:])
                     #Fill in end
                 else:
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
-                    tracelist1 = [ttl, howLongInSelect, addr[0], hopHostName]
+                    tracelist1 = [str(ttl), str(howLongInSelect), addr[0], hopHostName]
                     tracelist2.append(tracelist1[:])
                     #Fill in end
                 break
